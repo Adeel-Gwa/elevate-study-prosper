@@ -49,6 +49,3 @@ export const fourSkills = [
   { icon: PenTool, name: "Writing", d: "Task response, coherence and lexical range with examiner rubrics." },
   { icon: Mic, name: "Speaking", d: "Fluency, pronunciation and confidence in mock interviews." },
 ];
-
-// Route wrapper (unused as page but keeps file a route with no matched path)
-export const Route = createFileRoute("/_course-shared" as never)({ component: () => null });
