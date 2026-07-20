@@ -9,9 +9,75 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VerifyRouteImport } from './routes/verify'
+import { Route as SuccessStoriesRouteImport } from './routes/success-stories'
+import { Route as SpokenEnglishRouteImport } from './routes/spoken-english'
+import { Route as PteRouteImport } from './routes/pte'
+import { Route as LanguagecertRouteImport } from './routes/languagecert'
+import { Route as IeltsRouteImport } from './routes/ielts'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogsRouteImport } from './routes/blogs'
+import { Route as AdmissionsRouteImport } from './routes/admissions'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VerifyRoute = VerifyRouteImport.update({
+  id: '/verify',
+  path: '/verify',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuccessStoriesRoute = SuccessStoriesRouteImport.update({
+  id: '/success-stories',
+  path: '/success-stories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SpokenEnglishRoute = SpokenEnglishRouteImport.update({
+  id: '/spoken-english',
+  path: '/spoken-english',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PteRoute = PteRouteImport.update({
+  id: '/pte',
+  path: '/pte',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LanguagecertRoute = LanguagecertRouteImport.update({
+  id: '/languagecert',
+  path: '/languagecert',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IeltsRoute = IeltsRouteImport.update({
+  id: '/ielts',
+  path: '/ielts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogsRoute = BlogsRouteImport.update({
+  id: '/blogs',
+  path: '/blogs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmissionsRoute = AdmissionsRouteImport.update({
+  id: '/admissions',
+  path: '/admissions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -26,31 +92,192 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admissions': typeof AdmissionsRoute
+  '/blogs': typeof BlogsRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/ielts': typeof IeltsRoute
+  '/languagecert': typeof LanguagecertRoute
+  '/pte': typeof PteRoute
+  '/spoken-english': typeof SpokenEnglishRoute
+  '/success-stories': typeof SuccessStoriesRoute
+  '/verify': typeof VerifyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admissions': typeof AdmissionsRoute
+  '/blogs': typeof BlogsRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/ielts': typeof IeltsRoute
+  '/languagecert': typeof LanguagecertRoute
+  '/pte': typeof PteRoute
+  '/spoken-english': typeof SpokenEnglishRoute
+  '/success-stories': typeof SuccessStoriesRoute
+  '/verify': typeof VerifyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/admissions': typeof AdmissionsRoute
+  '/blogs': typeof BlogsRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/gallery': typeof GalleryRoute
+  '/ielts': typeof IeltsRoute
+  '/languagecert': typeof LanguagecertRoute
+  '/pte': typeof PteRoute
+  '/spoken-english': typeof SpokenEnglishRoute
+  '/success-stories': typeof SuccessStoriesRoute
+  '/verify': typeof VerifyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/admissions'
+    | '/blogs'
+    | '/contact'
+    | '/events'
+    | '/gallery'
+    | '/ielts'
+    | '/languagecert'
+    | '/pte'
+    | '/spoken-english'
+    | '/success-stories'
+    | '/verify'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about'
-  id: '__root__' | '/' | '/about'
+  to:
+    | '/'
+    | '/about'
+    | '/admissions'
+    | '/blogs'
+    | '/contact'
+    | '/events'
+    | '/gallery'
+    | '/ielts'
+    | '/languagecert'
+    | '/pte'
+    | '/spoken-english'
+    | '/success-stories'
+    | '/verify'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/admissions'
+    | '/blogs'
+    | '/contact'
+    | '/events'
+    | '/gallery'
+    | '/ielts'
+    | '/languagecert'
+    | '/pte'
+    | '/spoken-english'
+    | '/success-stories'
+    | '/verify'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AdmissionsRoute: typeof AdmissionsRoute
+  BlogsRoute: typeof BlogsRoute
+  ContactRoute: typeof ContactRoute
+  EventsRoute: typeof EventsRoute
+  GalleryRoute: typeof GalleryRoute
+  IeltsRoute: typeof IeltsRoute
+  LanguagecertRoute: typeof LanguagecertRoute
+  PteRoute: typeof PteRoute
+  SpokenEnglishRoute: typeof SpokenEnglishRoute
+  SuccessStoriesRoute: typeof SuccessStoriesRoute
+  VerifyRoute: typeof VerifyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/verify': {
+      id: '/verify'
+      path: '/verify'
+      fullPath: '/verify'
+      preLoaderRoute: typeof VerifyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/success-stories': {
+      id: '/success-stories'
+      path: '/success-stories'
+      fullPath: '/success-stories'
+      preLoaderRoute: typeof SuccessStoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/spoken-english': {
+      id: '/spoken-english'
+      path: '/spoken-english'
+      fullPath: '/spoken-english'
+      preLoaderRoute: typeof SpokenEnglishRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pte': {
+      id: '/pte'
+      path: '/pte'
+      fullPath: '/pte'
+      preLoaderRoute: typeof PteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/languagecert': {
+      id: '/languagecert'
+      path: '/languagecert'
+      fullPath: '/languagecert'
+      preLoaderRoute: typeof LanguagecertRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ielts': {
+      id: '/ielts'
+      path: '/ielts'
+      fullPath: '/ielts'
+      preLoaderRoute: typeof IeltsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blogs': {
+      id: '/blogs'
+      path: '/blogs'
+      fullPath: '/blogs'
+      preLoaderRoute: typeof BlogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admissions': {
+      id: '/admissions'
+      path: '/admissions'
+      fullPath: '/admissions'
+      preLoaderRoute: typeof AdmissionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -71,6 +298,17 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AdmissionsRoute: AdmissionsRoute,
+  BlogsRoute: BlogsRoute,
+  ContactRoute: ContactRoute,
+  EventsRoute: EventsRoute,
+  GalleryRoute: GalleryRoute,
+  IeltsRoute: IeltsRoute,
+  LanguagecertRoute: LanguagecertRoute,
+  PteRoute: PteRoute,
+  SpokenEnglishRoute: SpokenEnglishRoute,
+  SuccessStoriesRoute: SuccessStoriesRoute,
+  VerifyRoute: VerifyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
